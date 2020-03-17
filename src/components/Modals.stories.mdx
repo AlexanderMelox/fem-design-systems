@@ -1,0 +1,19 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
+import { withKnobs, boolean } from '@storybook/addon-knobs';
+import { SignUpModal, SignInModal } from './Modals';
+
+<Meta title="Design System|Modals" component={SignUpModal} />
+
+# Modals
+
+Modals are windows that pop up over content.
+
+## Sign up modal
+
+Sign up modal signs up the user to the application.
+
+<Preview withToolbar>
+  <Story name="sign up">
+    <SignUpModal showModal={boolean('Show modal', true)} />
+  </Story>
+</Preview>

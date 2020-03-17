@@ -1,11 +1,7 @@
-import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
-import { withKnobs, boolean } from "@storybook/addon-knobs";
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
 import { action } from '@storybook/addon-actions';
-import {
-  PrimaryButton,
-  SecondaryButton,
-  TertiaryButton,
-} from "./Buttons";
+import { withKnobs, boolean } from '@storybook/addon-knobs';
+import { PrimaryButton, SecondaryButton, TertiaryButton } from './Buttons';
 
 <Meta title="Design System|Buttons" component={PrimaryButton} />
 
@@ -23,7 +19,7 @@ Primary buttons are used as a call to action and indicate the most important act
 
 <Preview withToolbar>
   <Story name="primary">
-    <PrimaryButton onClick={action('button-click')} disabled={boolean("Disabled", false)}>Hello world</PrimaryButton>
+    <PrimaryButton disabled={boolean('Disabled', false)} onClick={action('button-click')}>Hello world</PrimaryButton>
   </Story>
 </Preview>
 
@@ -31,16 +27,16 @@ Primary buttons are used as a call to action and indicate the most important act
 
 Primary buttons are used as a call to action and indicate the most important action on a page.
 
-<Story name="secondary">
-  <SecondaryButton disabled={boolean("Disabled", false)}>Hello world</SecondaryButton>
-</Story>
+<Preview withToolbar>
+  <Story name="secondary">
+    <SecondaryButton>Hello world</SecondaryButton>
+  </Story>
+</Preview>
 
 ## Tertiary Buttons
 
 Primary buttons are used as a call to action and indicate the most important action on a page.
 
 <Story name="tertiary">
-  <TertiaryButton disabled={boolean("Disabled", false)}>Hello world</TertiaryButton>
+  <TertiaryButton>Hello world</TertiaryButton>
 </Story>
-
-
